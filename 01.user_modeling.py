@@ -45,8 +45,7 @@ def selecte_model(model_list, coherence_values):
     return model_list[index]
 
 # 사용자의 영화 평점 정보 불러오기
-# movie_data = pd.read_csv('../../../data/movie_lens/pre-data/u.data', sep='|')
-movie_data = pd.read_csv('../../../data/movie_lens/pre-data/u.data', sep='|')
+movie_data = pd.read_csv('./files/u.data', sep='|')
 movie_data.columns = ['user_id', 'movie_id', 'rating', 'time']
 sMovie_data = movie_data.sort_values(by='user_id')
 nMovie_data = np.array(sMovie_data)
